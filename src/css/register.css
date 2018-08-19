@@ -1,0 +1,64 @@
+@charset "UTF-8";
+.rtop .container .rtop_l, .ltop .container .rtop_l, .rtop .container .rtop_l h1, .ltop .container .rtop_l h1, .rtop .container .rtop_l a, .ltop .container .rtop_l a, .rmain .container form, .lmain .container form, .rmain .container .main_r, .lmain .container .main_r, .lmain .container .lmain_l, .lmain .container .lmain_r, .lmain .container .lmain_r p span, .lmain .container .lmain_r ul li { float: left; }
+
+.rtop .container .rtop_r, .ltop .container .rtop_r, .lmain .container .lmain_r p a { float: right; }
+
+.rtop .container::after, .ltop .container::after, .rtop .container .rtop_l::after, .ltop .container .rtop_l::after, .rmain .container::after, .lmain .container::after, .lmain .container .lmain_r p::after, .lmain .container .lmain_r ul::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
+
+/*注册页面*/
+/*头部*/
+.rtop .container .rtop_l h1, .ltop .container .rtop_l h1 { height: 130px; width: 196px; text-indent: -10000px; background: url(../images/base/ladygood.png) no-repeat left center; }
+
+.rtop .container .rtop_l a, .ltop .container .rtop_l a { margin-left: 10px; padding-left: 10px; border-left: 1px solid #ccc; display: block; font-size: 14px; color: #666; margin-top: 60px; }
+
+.rtop .container .rtop_r, .ltop .container .rtop_r { border: 1px solid #E21357; padding: 10px; margin: 60px 20px 0; }
+
+.rtop .container .rtop_r a, .ltop .container .rtop_r a { color: #E21357; margin-left: 10px; }
+
+/*rmain*/
+.rmain, .lmain { background: #EEEEEE; padding: 30px 0 18px; }
+
+.rmain .container, .lmain .container { background: #fff; height: 380px; }
+
+.rmain .container form, .lmain .container form { padding: 22px 36px; }
+
+.rmain .container form label, .lmain .container form label { font-size: 14px; }
+
+.rmain .container form .input, .lmain .container form .input { width: 285px; height: 35px; margin-bottom: 22px; margin-left: 20px; padding-left: 10px; color: #B1C6C6; }
+
+.rmain .container form .username, .lmain .container form .username { margin-left: 35px; }
+
+.rmain .container form .checkbox, .lmain .container form .checkbox { margin: 25px 0 25px 100px; }
+
+.rmain .container form a, .lmain .container form a { color: #666; font-size: 14px; }
+
+.rmain .container form .rbtn, .lmain .container form .rbtn { margin-left: 100px; background: #E21357; color: #fff; border: none; }
+
+/*登录页面*/
+/*头部*/
+.ltop .container .rtop_r { border: none; }
+
+.ltop .container .rtop_r a { border-left: 1px solid #ccc; border-right: 1px solid #ccc; padding: 0 10px; }
+
+/*lmian*/
+.lmain .container .lmain_l img { padding: 0; }
+
+.lmain .container .lmain_r p a { color: #E21357; }
+
+.lmain .container .lmain_r input { width: 250px; height: 35px; font-size: 10px; color: #BBD6FF; padding-left: 5px; margin: 10px 0; }
+
+.lmain .container .lmain_r .Code { width: 110px; }
+
+.lmain .container .lmain_r .createCode { width: 95px; height: 35px; }
+
+.lmain .container .lmain_r .lcheckbox { width: 12px; height: 12px; }
+
+.lmain .container .lmain_r .lbtn { background: #E21357; color: #fff; border: none; }
+
+.lmain .container .lmain_r p.last { border-bottom: 1px solid #eee; padding: 10px 40px; }
+
+.lmain .container .lmain_r ul { margin: 5px 95px 0; }
+
+.lmain .container .lmain_r ul li a { border-right: 1px solid #ccc; color: #666; padding: 0 10px; }
+
+.lmain .container .lmain_r ul li .qq { padding-left: 18px; background: url(../images/base/qq.png) no-repeat left center; }

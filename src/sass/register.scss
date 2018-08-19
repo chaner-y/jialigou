@@ -1,0 +1,173 @@
+@import 'var';
+
+/*注册页面*/
+/*头部*/
+.rtop{
+    .container{
+        @extend %clearfix;
+         .rtop_l{
+            @extend %clearfix;
+            @extend %fl;
+            h1{
+                 @extend %fl;
+                height:130px;
+                width:196px;
+                text-indent:-10000px;
+                background:url(../images/base/ladygood.png)no-repeat left center;
+            }
+            a{
+                 @extend %fl;
+                 margin-left:nth($pd,1);
+                 padding-left:nth($pd,1);
+                 border-left:1px solid #ccc;
+                 display:block;
+                 font-size:14px;
+                 color:$aColor;
+                margin-top:60px;
+            }
+        }
+        .rtop_r{
+            @extend %fr;
+            border:1px solid $mainColor;
+            padding:nth($pd,1);
+            margin:60px 20px 0;
+            a{
+                color:$mainColor;
+                margin-left:nth($pd,1);
+            }
+        }
+    }
+   
+} 
+/*rmain*/
+.rmain{
+    background:#EEEEEE;
+    padding:30px 0 18px;
+    .container{
+        background:$ColorW;
+        height:380px;
+        @extend %clearfix;
+        form{
+            @extend %fl;
+            padding:22px 36px;
+            label{
+                font-size:14px;
+            }
+            .input{
+                width:285px;
+                height:35px;
+                margin-bottom:22px;
+                margin-left:20px;
+                padding-left:nth($pd,1);
+                color:#B1C6C6;
+            }
+            .username{
+                margin-left:35px;
+            }
+            .checkbox{
+                margin:25px 0 25px 100px;
+            }
+            a{
+                color:$aColor;
+                font-size:14px;
+            }
+            .rbtn{
+                margin-left:100px;
+                background:$mainColor;
+                color:$ColorW;
+                border:none;
+            }
+        }
+        .main_r{
+            @extend %fl;
+        }
+    }
+}
+
+/*登录页面*/ 
+/*头部*/
+.ltop{
+    @extend .rtop;
+    .container{
+        .rtop_r{
+            border:none;
+            a{
+                border-left:1px solid #ccc;
+                border-right:1px solid #ccc;
+                padding:0 10px;
+            }
+        }
+    }
+    
+}
+/*lmian*/ 
+.lmain{
+    @extend .rmain;
+    .container{
+        @extend %clearfix;
+        .lmain_l{
+            @extend %fl;
+            img{
+                padding:0;
+            }
+        }
+        .lmain_r{
+            @extend %fl;
+            p{
+                @extend %clearfix;
+                span{
+                    @extend %fl;
+                }
+                a{
+                    @extend %fr;
+                    color:$mainColor;
+                }
+            }
+            input{
+                width:250px;
+                height:35px;
+                font-size:10px;
+                color:#BBD6FF;
+                padding-left:nth($pd,3);
+                margin:nth($pd,1) 0;
+            }
+            .Code{
+                width:110px;
+            }
+            .createCode{
+                width:95px;
+                height:35px;
+            }
+            .lcheckbox{
+                width:12px;
+                height:12px;
+            }
+            .lbtn{
+                background:$mainColor;
+                color:$ColorW;
+                border:none;
+            }
+            p.last{
+                border-bottom:1px solid #eee;
+                padding:nth($pd,1) nth($pd,5);
+            }
+            ul{
+                @extend %clearfix;
+                margin:5px 95px 0;
+                li{
+                    @extend %fl;
+                    a{
+                        border-right:1px solid #ccc;
+                        color:$aColor;
+                        padding:0 nth($pd,1);
+                    }
+                    .qq{
+                        padding-left:18px;
+                        background:url(../images/base/qq.png)no-repeat left center;
+                    }
+                }
+            }
+        }
+    }
+    
+}

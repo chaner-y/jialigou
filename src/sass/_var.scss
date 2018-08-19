@@ -1,0 +1,23 @@
+$mainColor:#E21357;
+$aColor:#666;
+$ColorW:#fff;
+$mainFontSize:12px;
+$pd:10px 20px 5px 30px 40px;
+%flex{
+    display:flex;
+}
+%fl{
+    float: left;
+}
+%fr{
+    float: right;
+}
+%clearfix::after{
+    content:"";
+    display:block;
+    height:0;
+    overflow:hidden;
+    clear:both;
+    visibility: hidden;
+    zoom:1;
+}

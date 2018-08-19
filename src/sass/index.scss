@@ -1,0 +1,161 @@
+@import 'var';
+/*轮播*/
+.banner{
+    .carousel-inner .item img{
+        background-size:contain|cover;
+        width:100%;
+        height:480px;
+    }
+  
+}
+/*热播*/
+.tvhot{
+    height:385px;
+    h3{
+        margin:0;
+        a{
+            height:50px;
+            line-height:50px;
+            font-size:20px;
+            margin:0 10px;
+            color:$aColor;
+
+        }
+        a.active{
+            color:$mainColor;
+        }
+        
+    }
+    .tvhot_b{
+        @extend %flex;
+        .tvhot{
+            width:190px;
+            height:330px;
+        }
+        .tvhot_m{
+            flex:1;
+            @extend %flex;
+            margin:0;
+            justify-content: space-around;
+            .tvhot_g{
+                flex:1;
+                margin-left:20px;
+                border:1px solid #eee;
+                .tv{
+                    text-align:center;
+                    span{
+                        display:block;
+                        height:24px;
+                        line-height:24px;
+                        font-size:10px;
+                        color:$mainColor;
+                    }
+                    img{
+                        width:217px;
+                    }
+                }
+                h6{
+                     height:30px;
+                     line-height:30px;
+                     padding-left:10px;
+                }
+                 p{
+                    height:24px;
+                    line-height:24px;
+                    padding-left:10px;
+                    color:$mainColor;
+               }
+            }
+            .tvhot_g:hover{
+                border:1px solid #ccc;
+            }
+        }
+    }
+}
+/*热销*/
+.sellhot{
+    @extend .tvhot;
+    .last{
+        @extend %fr;
+        margin-right:10px;
+    }
+}
+.main{
+    .main0{
+        .main_t{
+            height:55px;
+            margin:0;
+            line-height:55px;
+            font-size:20px;
+            // padding-left:nth($pd,5);
+            i{
+                width:34px;
+                height:34px;
+                margin:0 nth($pd,1);
+            }
+        }
+        .main_b{
+            height:520px;
+            @extend %flex;
+            .main_bl{
+                width:190px;
+                ul{
+                    margin:0;
+                    @extend %clearfix;
+                    background:#FDF4F7;
+                    padding-bottom:nth($pd,1);
+                    li{
+                        @extend %fl;
+                        a{
+                            display:block;
+                            height:40px;
+                            line-height:40px;
+                            margin:0 nth($pd ,1);
+                            color:$aColor;
+                        }
+                        a:hover{
+                            color:$mainColor;
+                        }
+                    }
+                }
+            }
+            .main_bc{
+                width:385px;
+            }
+            .main_br{
+                flex:1;
+                @extend %flex;
+                flex-wrap:wrap;
+                justify-content: space-around;
+                li{
+                    flex:1;
+                    border:1px solid #eee;
+                    margin-left:nth($pd,1);
+                    height:258px;
+                    img{
+                        width:175px;
+                    }
+                    h6{
+                        height:30px;
+                        padding-left:nth($pd,1);
+                   }
+                    p{
+                       height:20px;
+                       line-height:20px;
+                       padding-left:10px;
+                       color:$mainColor;
+                  }
+                }
+                li:hover{
+                    border-color:#ccc;
+                }
+            }
+        }
+    }
+    .gg{
+        margin-top:nth($pd,2);
+        img{
+            width:1190px;
+        }
+    }
+}
