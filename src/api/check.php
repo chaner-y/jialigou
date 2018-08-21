@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-08-19 22:25:49
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-08-20 00:12:25
+ * @Last Modified time: 2018-08-20 16:40:10
  */
 include 'connect.php';
 /*
@@ -12,9 +12,8 @@ include 'connect.php';
         username
  */
     $username = isset($_GET['username'])?$_GET['username']:null;
-
     //查找数据库中否存在同名
-    $sql = "select * form register where name='$username'";
+    $sql = "SELECT * from register WHERE name='$username'";
     //执行sql语句
     $result = $conn->query($sql);
 

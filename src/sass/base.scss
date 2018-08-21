@@ -161,7 +161,7 @@ a:hover{
                 padding-left:nth($pd,1);
                 color:$ColorW;
                 font-weight:bold;  
-                 position:relative;
+                position:relative;
             }
             .nav2{
                 width:190px;
@@ -169,6 +169,7 @@ a:hover{
                 background:#3B2C33;
                 z-index:1;
                 padding-bottom:nth($pd,1);
+                display:none;
                 .nav2_m{
                      padding-left:nth($pd,1);
                      padding-top:nth($pd,3);
@@ -234,8 +235,10 @@ a:hover{
                     }
                 }
             }
-
         }
+        .n_l:hover .nav2{
+                display:block;
+            }
         .n_c{
              // @extend %fl;
              flex:1;
@@ -325,13 +328,18 @@ a:hover{
             }
          }
          .links_br{
+            @extend %clearfix;
             width:300px;
             padding:38px 0 0 50px;
+            img{
+                @extend %fl;
+                }
             div{
-                @extend %fr;
+                @extend %fl;
+                margin-left:nth($pd,2);
                 text-align:center;
                 h3{
-                    font-size:14px;
+                    font-size:18px;
                     font-weight:bold;
                     margin-top:10px;
                 }

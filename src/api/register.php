@@ -9,11 +9,11 @@ include 'connect.php';
  */
 $username = isset($_POST['username'])? $_POST['username']:null;
     $password = isset($_POST['password'])? $_POST['password']:null;
-    $password0 = isset($_POST['password0'])? $_POST['password0']:null;
+    $rpassword = isset($_POST['rpassword'])? $_POST['rpassword']:null;
 
 
     //查找数据库是否存在同用户名
-    if($password === $password0){
+    if($password === $rpassword){
         $sql = "insert into register(name,password) values('$username','$password')";
 
     //执行sql语句
