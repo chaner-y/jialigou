@@ -1,0 +1,64 @@
+@import 'var';
+.main{
+    .title{
+        padding-left:nth($pd,2);
+        a{
+            display:inline-block;
+            height:45px;
+            line-height:45px;
+            color:$aColor;
+            &:hover{
+                color:$mainColor;
+            }
+        }
+
+    }
+    .main0{
+        @extend %clearfix;
+        @extend %flex;
+        .main0_l{
+            @extend %fl;
+            img{
+                width:400px;
+                border:1px solid #ccc;
+            }
+            ul{
+                @extend %clearfix;
+                margin-top:nth($pd,1);
+                width:400px;
+                li{
+                    @extend %fl;
+                    margin-right:nth($pd,1);
+                    img{
+                        height:65px;
+                        width:65px;
+                        border:1px solid #ccc;
+                    }
+                }
+            }
+            dl{
+                @extend %clearfix;
+                dt{
+                    @extend %fl;
+                }
+                dd{
+                    @extend %fl;
+                    a{
+                        display:inline-block;
+                        height:20px;
+                        width:20px;
+                        margin-right:nth($pd,1);
+                        background:url('../images/goodslist/jinglingtu.png');
+                    }
+                    a.two{
+                        background-postion:-25px 0;
+                    }
+                }
+            }
+        }
+        .main0_r{
+            flex:1;
+            margin-left:nth($pd,2);
+        }
+    }
+}

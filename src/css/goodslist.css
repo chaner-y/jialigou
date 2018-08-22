@@ -1,0 +1,97 @@
+.main .main0, .main .main0 .main_r { display: flex; }
+
+.main .main0 .main_l, .main .main0 .main_r .main_rc .paixu, .main .main0 .main_r .main_rb li, .main .main0 .main_r .main_rb li .fl, .guess .goodslist li, .guess .goodslist li .fl { float: left; }
+
+.main .main0 .main_r .main_rc .paisong, .main .main0 .main_r .main_rb li .fr, .guess .goodslist li .fr { float: right; }
+
+.main::after, .main .main0 .main_r .main_rc::after, .guess .goodslist::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
+
+.main .main0 .main_r .main_rc .paixu span, .main .main0 .main_r .main_rc .paisong span { display: inline-block; height: 30px; line-height: 30px; margin-left: 10px; background: #EEEEEE; padding: 0 5px; }
+
+.main .title { padding-left: 20px; }
+
+.main .title a { display: inline-block; height: 35px; line-height: 35px; color: #666; }
+
+.main .title a:hover { color: #E21357; }
+
+.main .main0 .main_l { border: 1px solid #ccc; }
+
+.main .main0 .main_l .mian_lt { width: 190px; }
+
+.main .main0 .main_l .mian_lt h3 { padding-left: 20px; height: 30px; line-height: 30px; margin: 0; background-color: #E8E8E7; border-bottom: 1px solid #fff; }
+
+.main .main0 .main_l .mian_lt div.pst { height: 300px; }
+
+.main .main0 .main_l .mian_lt div.pst p a { display: block; padding-left: 20px; height: 45px; line-height: 45px; color: #000; }
+
+.main .main0 .main_l .main_lb h3 { height: 40px; line-height: 40px; padding-left: 20px; color: #E21357; font-size: 14px; margin-bottom: 0; border-bottom: 1px solid #ccc; }
+
+.main .main0 .main_l .main_lb .main_lg img { width: 190px; }
+
+.main .main0 .main_l .main_lb p { width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+
+.main .main0 .main_l .main_lb p a { padding-left: 10px; color: #666; font-size: 10px; }
+
+.main .main0 .main_l .main_lb p a:hover { color: #E21357; }
+
+.main .main0 .main_l .main_lb .last { margin: 0; height: 22px; line-height: 22px; padding-left: 10px; color: #E21357; }
+
+.main .main0 .main_r { flex: 1; flex-direction: column; margin-left: 5px; border: 1px solid #ccc; }
+
+.main .main0 .main_r .main_rt { border-bottom: 1px solid #ccc; }
+
+.main .main0 .main_r .main_rt p { margin: 0; height: 45px; line-height: 45px; padding-left: 20px; }
+
+.main .main0 .main_r .main_rt p span { padding: 5px; }
+
+.main .main0 .main_r .main_rt p span.active { background: #E21357; color: #fff; }
+
+.main .main0 .main_r .main_rc { border-bottom: 1px solid #ccc; }
+
+.main .main0 .main_r .main_rc .paixu { padding: 10px; }
+
+.main .main0 .main_r .main_rc .paisong { padding: 10px; }
+
+.main .main0 .main_r .main_rb li { margin: 5px 0; margin: 9px; border: 1px solid #fff; }
+
+.main .main0 .main_r .main_rb li div img { width: 215px; }
+
+.main .main0 .main_r .main_rb li p { padding-left: 10px; width: 215px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+
+.main .main0 .main_r .main_rb li p a { color: #666; }
+
+.main .main0 .main_r .main_rb li p a:hover { color: #E21357; }
+
+.main .main0 .main_r .main_rb li .fl { margin: 10px; color: #E21357; }
+
+.main .main0 .main_r .main_rb li .fr { margin: 10px; }
+
+.main .main0 .main_r .main_rb li .add { text-align: center; margin-bottom: 10px; }
+
+.main .main0 .main_r .main_rb li .add span { display: inline-block; height: 30px; line-height: 30px; margin-right: 10px; padding: 0 10px; background: #ccc; }
+
+.main .main0 .main_r .main_rb li:hover { border-color: #ccc; }
+
+.guess h3 { height: 55px; margin: 0 20px; line-height: 55px; font-size: 14px; color: #666; }
+
+.guess .goodslist { text-align: center; border: 1px solid #ccc; }
+
+.guess .goodslist li { margin: 5px 0; margin: 33px; border: 1px solid #fff; }
+
+.guess .goodslist li div img { width: 215px; }
+
+.guess .goodslist li p { padding-left: 10px; width: 215px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+
+.guess .goodslist li p a { color: #666; }
+
+.guess .goodslist li p a:hover { color: #E21357; }
+
+.guess .goodslist li .fl { margin: 10px; color: #E21357; }
+
+.guess .goodslist li .fr { margin: 10px; }
+
+.guess .goodslist li .add { text-align: center; margin-bottom: 10px; }
+
+.guess .goodslist li .add span { display: inline-block; height: 30px; line-height: 30px; margin-right: 10px; padding: 0 10px; background: #ccc; }
+
+.guess .goodslist li:hover { border-color: #ccc; }

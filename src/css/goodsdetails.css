@@ -1,0 +1,25 @@
+.main .main0 { display: flex; }
+
+.main .main0 .main0_l, .main .main0 .main0_l ul li, .main .main0 .main0_l dl dt, .main .main0 .main0_l dl dd { float: left; }
+
+.main .main0::after, .main .main0 .main0_l ul::after, .main .main0 .main0_l dl::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
+
+.main .title { padding-left: 20px; }
+
+.main .title a { display: inline-block; height: 45px; line-height: 45px; color: #666; }
+
+.main .title a:hover { color: #E21357; }
+
+.main .main0 .main0_l img { width: 400px; border: 1px solid #ccc; }
+
+.main .main0 .main0_l ul { margin-top: 10px; width: 400px; }
+
+.main .main0 .main0_l ul li { margin-right: 10px; }
+
+.main .main0 .main0_l ul li img { height: 65px; width: 65px; border: 1px solid #ccc; }
+
+.main .main0 .main0_l dl dd a { display: inline-block; height: 20px; width: 20px; margin-right: 10px; background: url("../images/goodslist/jinglingtu.png"); }
+
+.main .main0 .main0_l dl dd a.two { background-postion: -25px 0; }
+
+.main .main0 .main0_r { flex: 1; margin-left: 20px; }

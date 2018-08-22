@@ -27,22 +27,28 @@
         a.active{
             color:$mainColor;
         }
-        
+        a:hover{
+            text-decoration:none;
+        }
     }
     .tvhot_b{
         @extend %flex;
-        .tvhot{
-            width:190px;
-            height:330px;
-        }
+        // .tvhot{
+        //     width:190px;
+        //     height:330px;
+        // }
+       
         .tvhot_m{
             flex:1;
             @extend %flex;
             margin:0;
+            // position: relative;
+            overflow:hidden;
+            width:955px;
             justify-content: space-around;
             .tvhot_g{
                 flex:1;
-                margin-left:20px;
+                margin-left:18px;
                 border:1px solid #eee;
                 .tv{
                     text-align:center;
@@ -71,8 +77,45 @@
             }
             .tvhot_g:hover{
                 border:1px solid #ccc;
+                
             }
         }
+        .pages{
+            position: relative;
+        //     @extend %clearfix;
+            .prev{
+                position:absolute;
+                top:50%;
+                left:22px;
+                display:block;
+                height:50px;
+                text-align:center;
+                line-height:50px;
+                width:30px;
+                opacity: 0.8;
+                background:#ccc;
+                display:none;
+             }
+             .next{
+                position:absolute;
+                top:50%;
+                right:5px;
+                display:block;
+                height:50px;
+                text-align:center;
+                line-height:50px;
+                width:30px;
+                background:#ccc;
+                display:none;
+
+             }
+             &:hover{
+                .prev,.next{
+                    display:block;
+                }
+             }
+         }
+        
     }
 }
 /*热销*/
@@ -113,7 +156,7 @@
                             display:block;
                             height:40px;
                             line-height:40px;
-                            margin:0 nth($pd ,1);
+                            margin:0 nth($pd,1);
                             color:$aColor;
                         }
                         a:hover{
