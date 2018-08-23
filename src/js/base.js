@@ -19,4 +19,15 @@ jQuery($=>{
        Cookie.remove('obj');
        location.reload();
     });
+
+    //判断是否点击加入购物车车
+    var num = Cookie.get('qty');
+    $('.number').html('');
+    // console.log($('.number'));
+
+    if(num){
+        num = JSON.parse(num);
+    $('.number').html(num);
+    console.log($('.number').html());
+}
 });

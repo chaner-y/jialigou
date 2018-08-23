@@ -51,7 +51,16 @@
                         background:url('../images/goodslist/jinglingtu.png');
                     }
                     a.two{
-                        background-postion:-25px 0;
+                        background-position:-25px 0;
+                    }
+                    a.three{
+                        background-position:-50px 0;
+                    }
+                    a.four{
+                        background-position:-70px 0;
+                    }
+                    a.fine{
+                        background-position:-95px 0;
                     }
                 }
             }
@@ -59,6 +68,244 @@
         .main0_r{
             flex:1;
             margin-left:nth($pd,2);
+            .main0_rt{
+                @extend %clearfix;
+                    h3{
+                        @extend %fl;
+                        margin:0;
+                        height:34px;
+                        line-height:34px;
+                    }
+                    span{
+                        @extend %fl;
+                        margin-top:nth($pd,1);
+                        color:$mainColor;
+                    }
+                    .goodsid{
+                        @extend %fr;
+                        color:$aColor;
+
+                    }
+                }
+            }
+            .main_rp{
+                background:#ccc;
+                margin:nth($pd,1);
+                p{
+                    margin:0 nth($pd,2);
+
+                    .zuo{
+                        height:50px;
+                        line-height:50px;
+                    }
+                    .you{
+                        margin-left:50px;
+                    }
+                    .col{
+                        color:$mainColor;
+                        strong{
+                            font-size:30px;
+                        }
+                    }
+                }
+            }
+            .main_size{
+                margin-left:nth($pd,1);
+                border-bottom:1px solid #ccc;
+                @extend %main_size;
+            }
+            .main_qty{
+               margin-left:nth($pd,1);
+                @extend %main_size;
+                .qty{
+                    width:50px;
+                    height:30px;
+                }
+            }
+            .addd{
+                margin:120px nth($pd,1) 0;
+                button{
+                    margin:0 nth($pd,1);
+                    border:none;
+                }
+                .kl{
+                    height:30px;
+                    width:150px;
+                }
+                .jg{
+                    background:$mainColor;
+                    color:$ColorW;
+                }
+                .sc{
+                    height:30px;
+                    width:50px;
+                }
+            }
         }
-    }
+        .main_lis{
+            margin-top:nth($pd,1);
+            span{
+                display:inline-block;
+                padding:nth($pd,1) nth($pd,2);
+                background:#ccc;
+            }
+            ul{
+                @extend %clearfix;
+                border:1px solid #ccc;
+                padding:nth($pd,3);
+                li{
+                    @extend %fl;
+                    border:1px solid $ColorW;
+                    margin:0 16px;
+                    img{
+                        width:190px;
+
+                    }
+                    p {
+                        width:190px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                         a{  
+                            padding-left:nth($pd,1);
+                            color:$aColor;
+                            font-size:10px;
+                            &:hover{
+                                color:$mainColor;
+                            }
+                        }
+                    }
+                    span{
+                            display:inline-block;
+                            background:none;
+                            color:$mainColor;
+                     }
+                    &:hover{
+                        border-color:#ccc;
+                    }
+                }
+            }
+        }
+        .main_b{
+            @extend %flex;
+            margin-top:nth($pd,2);
+            .main_bl{
+                @extend %fl;
+                .weixing{
+                    @extend %xq;
+                }
+                .liulan{
+                    @extend %xq;
+                    @extend %title;
+                    span{
+                       color:$mainColor; 
+                    }
+                }
+                .tuijian{
+                    @extend %xq;
+                    li{
+                        border:1px solid $ColorW;
+                        @extend %title;
+                        span{
+                           color:$mainColor; 
+                        }
+                        &:hover{
+                            border-color:#ccc;
+                        }
+                    }
+                    
+                }
+            }
+            .main_br{
+                flex:1px;
+                background:#F8F8F8;
+                margin-left:nth($pd,1);
+                border:1px solid #ccc;
+                .meun{
+                    padding:0 nth($pd,1);
+                    background:#EEEEEE;
+                    ul{
+                        margin:0;
+                        @extend %clearfix;
+                        li{
+                            @extend %fl;
+                            height:45px;
+                            .menu_logo{
+                                display:block;
+                                    height: 12px;
+                                    width: 182px;
+                                    background: url(../images/goodslist/gray.png) no-repeat;
+                            }
+                            .curr{
+                                    background: url(../images/goodslist/red.png) no-repeat;
+
+                            }
+                            i{
+                                display:block;
+                                height:33px;
+                                line-height:33px;
+                                font-style:normal;
+                                margin-left:70px;
+                            }
+                        }
+                    }
+                }
+                .meun_list{
+                    .jieshao{
+                        text-align:center;
+                        display:none;
+
+                    }
+                    .canshu{
+                        text-align:center;
+                        display:none;
+                        img{
+                        width:840px;
+                        }
+                    }
+                    .baozhuang{
+                        display:none;
+
+                        p{
+                            margin:nth($pd,5);
+                            background:#eee;
+                            height:45px;
+                            line-height:45px;
+                            padding-left:nth($pd,2);
+                        }
+                    }
+                    .plun{
+                        display:none;
+                        p{
+                            margin:50px;
+                             a{  
+                                padding-left:nth($pd,1);
+                                color:$aColor;
+                                font-size:10px;
+                                &:hover{
+                                    color:$mainColor;
+                                }
+                            }
+                        }
+                    }
+                    .zixun{
+                     display:none;
+                        p{
+                            margin:50px;
+                             a{  
+                                padding-left:nth($pd,1);
+                                color:$aColor;
+                                font-size:10px;
+                                &:hover{
+                                    color:$mainColor;
+                                }
+                            }
+                        }                   
+                    }
+                    .selected{
+                        display:block;
+                    }
+                }
+            }
+        }
 }

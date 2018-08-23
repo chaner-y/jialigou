@@ -131,10 +131,25 @@ a:hover{
                 border:1px solid #eee;
                 font-size:$mainFontSize;
                 @extend %fr;
-                    // width:50px;
-                    // height:27px;
-                // padding-left:nth($pd,1);
-                background:url('../images/base/car.png')no-repeat left center;
+                span{
+                    display:inline-block;
+                    height:13px;
+                    width:20px;
+                    margin-left:-20px;
+                    position:relative;
+                    background:url('../images/base/cart.png')no-repeat left center;
+                    i{
+                        position:absolute;
+                        top:-7px;
+                        right:-7px;
+                        height:15px;
+                        width:15px;
+                        border-radius:40%;
+                        background:$mainColor;
+                        color:$ColorW;
+                    }
+                }
+                
             }
             
         }

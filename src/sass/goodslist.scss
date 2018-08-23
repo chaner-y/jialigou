@@ -123,7 +123,8 @@
                 }
             }
             .main_rb{
-                // @extend %clearfix;
+                @extend %clearfix;
+                padding-bottom:50px;
                 li{
                     @extend %fl;
                     // @extend %clearfix;
@@ -170,6 +171,23 @@
                     }
                     &:hover{
                         border-color:#ccc;
+                    }
+                }
+                .page{
+                    text-align:center;
+                    .one{
+                        margin:nth($pd,2);
+                    }
+                    .fenye{
+                        display:inline-block;
+                        height:30px;
+                        width:30px;
+                        line-height:30px;
+                        background:#ddd;
+                        margin:nth($pd,1);
+                    }
+                    .active{
+                        background:#fc0;
                     }
                 }
             }

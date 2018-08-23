@@ -55,7 +55,11 @@ a:hover { color: #E21357; text-decoration: underline; }
 
 .header .container .h_r { flex: 1; height: 74px; }
 
-.header .container .h_r .car { width: 155px; margin-top: 20px; height: 30px; background: #fff; border: 1px solid #eee; font-size: 12px; background: url("../images/base/car.png") no-repeat left center; }
+.header .container .h_r .car { width: 155px; margin-top: 20px; height: 30px; background: #fff; border: 1px solid #eee; font-size: 12px; }
+
+.header .container .h_r .car span { display: inline-block; height: 13px; width: 20px; margin-left: -20px; position: relative; background: url("../images/base/cart.png") no-repeat left center; }
+
+.header .container .h_r .car span i { position: absolute; top: -7px; right: -7px; height: 15px; width: 15px; border-radius: 40%; background: #E21357; color: #fff; }
 
 /*导航栏*/
 .nav { border-bottom: 2px solid #E21357; }
