@@ -6,8 +6,20 @@ jQuery(function($){
     $('.footer').load('../html/base.html .footer0');
 
     //获取Cookie
+    //
     var str = Cookie.get('goodslist');
     console.log(str);
+    var imgu = Cookie.get('imgurl0');
+    // if(imgu){
+    //     console.log(imgu);
+    //     imgu = JSON.parse(imgu);
+    //     $('.goods_max').attr("src",imgu);
+    //     $('.goods_max').attr("height",400);
+
+    //     $('.goods_min').attr("src",imgu);
+    //     $('.main0_r').html('此产品已售空');
+
+    // }
     if(str){
         str = JSON.parse(str);
     }
@@ -17,7 +29,7 @@ jQuery(function($){
     var content = '';
     var content0 = '';
     var content1 = '';
-
+    var goods;
     $.ajax({
         url:'../api/index.php',
         type:'POST',
@@ -28,6 +40,7 @@ jQuery(function($){
             //判断cookie拿到的id是否跟数据库的id一致
             data.map(function(item){
                 if(str===item.id){
+                    goods = item;
                    $('.ttl').text(item.titile);
                    $('.chicun').text(item.titile);
                    $('.goodsid').text(`[商品号：000${item.id}]`);
@@ -75,4 +88,48 @@ jQuery(function($){
          $(this).siblings().find('.menu_logo').removeClass("curr");
         $(".meun_list .main").eq(index).addClass("selected").siblings().removeClass("selected");
    });
+
+   //放大镜
+    // $('.goods').lxzoom({width:500,height:200});
+    //     $('.small').on('click','img',function(){
+    //         $('.goods img').attr({
+    //             'src':this.src,
+    //             'data-big':this.dataset.big
+    //         });
+    //     });
+    // cookie操作
+    var goodslist = Cookie.get('goodslist0');
+        if(goodslist === ''){
+            goodslist = []
+        }else{
+            goodslist = JSON.parse(goodslist);
+        }
+    $('.jg').on('click',function(){
+        console.log(goods);
+        var _qty = $('.qty').val()*1;
+        var res = {
+            id:goods.id,
+            price:goods.price,
+            title:goods.titile,
+            imgurl:goods.imgurl,
+            qty:_qty
+        };
+         var isshow = false;
+         var index = '';
+         for(var i=0;i<goodslist.length;i++){
+            if(goodslist[i].id === str){
+                isshow = true;
+                index = i ;
+                break;
+            }
+         }
+         if(!isshow){
+                goodslist.push(res);
+         }else{
+            goodslist[i].qty += _qty;
+         }
+         console.log(goodslist);
+
+        Cookie.set('goodslist0',JSON.stringify(goodslist),{path:'/'});
+    });
 });

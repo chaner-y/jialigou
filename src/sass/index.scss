@@ -67,6 +67,12 @@
                      height:30px;
                      line-height:30px;
                      padding-left:10px;
+                     a{
+                        color:$aColor;
+                        &:hover{
+                            color:$mainColor;
+                        }
+                     }
                 }
                  p{
                     height:24px;
@@ -184,6 +190,12 @@
                     h6{
                         height:30px;
                         padding-left:nth($pd,1);
+                        a{
+                        color:$aColor;
+                        &:hover{
+                            color:$mainColor;
+                        }
+                     }
                    }
                     p{
                        height:20px;

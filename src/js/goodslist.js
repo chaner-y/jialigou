@@ -104,6 +104,7 @@ jQuery(function($){
         //target 是得到节点
         _pageNo = $(target).html();
         console.log(_pageNo);
+          
         $.ajax({
           url:"../api/goodslist.php",
           type:"POST",

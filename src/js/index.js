@@ -18,11 +18,11 @@ jQuery(function($){
                 var res = data.slice(0,4);
                 console.log(res);
                     res.map(function(item){
-                    content += `<li class="tvhot_g">
+                    content += `<li class="tvhot_g" data-guid="${item.id}">
                     <div class="tv">
-                        <img src="${item.imgurl}">
+                        <img src="${item.imgurl}"class="tupian">
                     </div>
-                    <h6 class="name">${item.titile}</h6>
+                    <h6 class="name"><a class="title">${item.titile}</a></h6>
                     <p>￥<span class="price">${item.price}</span></p>
                     <p class="last">已热销：<span class="allsell">${item.sell}</span>件</p>
                     </li>`
@@ -32,12 +32,12 @@ jQuery(function($){
                 var res1 = data.slice(4,8);
                 console.log(res1);
                     res1.map(function(item){
-                    content1 += `<li class="tvhot_g">
+                    content1 += `<li class="tvhot_g" data-guid="${item.id}">
                     <div class="tv">
                         <span>[00:53~01:31]</span>
-                        <img src="${item.imgurl}">
+                        <img src="${item.imgurl}" class="tupian">
                     </div>
-                    <h6 class="name">${item.titile}</h6>
+                    <h6 class="name"><a class="title">${item.titile}</a></h6>
                     <p>￥<span class="price">${item.price}</span></p>
                     </li>`
                 }).join(''); 
@@ -48,11 +48,11 @@ jQuery(function($){
                 var res2 = data.slice(0,6);
                 var content2 = '';
                 res2.map(function(item){
-                    content2 +=`<li>
+                    content2 +=`<li data-guid = "${item.id}">
                         <div class="main_brt">
-                            <img src="${item.imgurl}"  alt="">
+                            <img src="${item.imgurl}" class="tupian" alt="">
                         </div>
-                        <h6>${item.titile}</h6>
+                        <h6><a class="title">${item.titile}</a></h6>
                         <p>￥<span>${item.price}</span></p>
                     </li>`
                 }).join('');
@@ -62,11 +62,11 @@ jQuery(function($){
                 var res3 = data.slice(6,12);
                 var content3 = '';
                  res3.map(function(item){
-                    content3 +=`<li>
+                    content3 +=`<li data-guid = "${item.id}">
                         <div class="main_brt">
-                            <img src="${item.imgurl}"  alt="">
+                            <img src="${item.imgurl}" class="tupian" alt="">
                         </div>
-                        <h6>${item.titile}</h6>
+                        <h6><a class="title">${item.titile}</a></h6>
                         <p>￥<span>${item.price}</span></p>
                     </li>`
                 }).join('');
@@ -76,11 +76,11 @@ jQuery(function($){
                 var res4 = data.slice(6,12);
                 var content4 = '';
                  res4.map(function(item){
-                    content4 +=`<li>
+                    content4 +=`<li data-guid="${item.id}">
                         <div class="main_brt">
-                            <img src="${item.imgurl}"  alt="">
+                            <img src="${item.imgurl}" class="tupian" alt="">
                         </div>
-                        <h6>${item.titile}</h6>
+                        <h6><a class="title">${item.titile}</a></h6>
                         <p>￥<span>${item.price}</span></p>
                     </li>`
                 }).join('');
@@ -90,11 +90,11 @@ jQuery(function($){
                 var res5 = data.slice(12,18);
                 var content5 = '';
                  res5.map(function(item){
-                    content5 +=`<li>
+                    content5 +=`<li data-guid = "${item.id}">
                         <div class="main_brt">
-                            <img src="${item.imgurl}"  alt="">
+                            <img src="${item.imgurl}" class="tupian" alt="">
                         </div>
-                        <h6>${item.titile}</h6>
+                        <h6><a class="title">${item.titile}</a></h6>
                         <p>￥<span>${item.price}</span></p>
                     </li>`
                 }).join('');
@@ -102,5 +102,23 @@ jQuery(function($){
             } 
 
        }); 
+        $('#shouye').on('click',function(e){
+            var target = e.target;
+            if(target.className==="tupian" || target.className === 'title'){
+            var guid = target.parentNode.parentNode.getAttribute('data-guid');
+            console.log(guid);
+            Cookie.set('goodslist',JSON.stringify(guid),{path:'/'});
+            location.href = "html/goodsdetails.html";
+            }
+            if(target.className === "shouwan"){
+              var imgurl0 = target.src;
+              console.log(imgurl0);
+              Cookie.set('imgurl0',JSON.stringify(imgurl0),{path:'/'});
+                location.href = "html/goodsdetails.html";
+            }
+        });
+        $('.btn').on('click',function(){
+            location.href = "../html/shoppingcar.html";
+        });
 
 });

@@ -1,0 +1,87 @@
+.header .container, .main .main_b { display: flex; }
+
+.header .container .header_l h1, .header .container .header_l a, .header .container .header_r li, .main .main_t span, .main .main_c table tbody tr td .checkbox, .main .main_c table tbody tr td img, .guess .container .cai li { float: left; }
+
+.main .main_t a { float: right; }
+
+.header .container .header_l::after, .header .container .header_r::after, .main .main_t::after, .guess .container .cai::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
+
+.guess .container .cai li p { width: 190px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+
+.guess .container .cai li p a { padding-left: 10px; color: #666; font-size: 10px; }
+
+.guess .container .cai li p a:hover { color: #E21357; }
+
+.header .container { margin: 0 auto; }
+
+.header .container .header_l h1 { height: 130px; width: 196px; margin: 0; text-indent: -10000px; background: url(../images/base/ladygood.png) no-repeat left center; }
+
+.header .container .header_l a { margin-left: 10px; padding-left: 10px; border-left: 1px solid #ccc; display: block; font-size: 14px; color: #666; margin-top: 60px; }
+
+.header .container .header_r { flex: 1; margin: 50px 0 0 330px; }
+
+.header .container .header_r li .carlogo { display: block; height: 12px; width: 135px; background: url(../images/goodslist/car2.png) no-repeat; }
+
+.header .container .header_r li .caoc { display: block; height: 24px; line-height: 24px; text-align: center; }
+
+.header .container .header_r li .active { background: url(../images/goodslist/car1.png) no-repeat; }
+
+.main .main_t span { height: 24px; line-height: 24px; }
+
+.main .main_t a { color: #E21357; }
+
+.main .main_c table { margin-top: 10px; border: 1px solid #ccc; width: 100%; }
+
+.main .main_c table thead { height: 40px; line-height: 40px; background: #EEEEEE; border-bottom: 1px solid #ccc; }
+
+.main .main_c table thead td { padding-left: 10px; }
+
+.main .main_c table tbody tr { border-bottom: 1px solid #ccc; }
+
+.main .main_c table tbody tr td .checkbox { margin: 90px 10px; }
+
+.main .main_c table tbody tr td img { width: 200px; }
+
+.main .main_c table tbody tr td .num { width: 40px; height: 30px; }
+
+.main .main_c table tbody tr td .jian, .main .main_c table tbody tr td .jia { display: inline-block; width: 20px; height: 30px; text-align: center; }
+
+.main .main_c table tbody tr td .jiali { font-weight: bold; }
+
+.main .main_c table tbody tr td .adds, .main .main_c table tbody tr td .del { display: block; }
+
+.main .main_b { height: 130px; background: #eeeeee; border: 1px solid #ccc; }
+
+.main .main_b .main_bl { flex: 1px; padding: 20px; }
+
+.main .main_b .main_bl a { margin: 0 10px; color: #666; }
+
+.main .main_b .main_bl a:hover { color: #E21357; }
+
+.main .main_b .main_bc { width: 215px; border-right: 1px solid #ccc; }
+
+.main .main_b .main_bc p { margin: 0; height: 24px; line-height: 24px; }
+
+.main .main_b .main_bc h3 { margin: 10px 0; height: 30px; line-height: 30px; font-size: 20px; font-weight: bold; color: #E21357; }
+
+.main .main_b .main_br { width: 330px; }
+
+.main .main_b .main_br span { display: block; width: 150px; height: 30px; line-height: 30px; text-align: center; color: #fff; background: #E21357; margin: 90px 80px; }
+
+.guess .container { margin: 10px auto; padding: 0 10px; }
+
+.guess .container h3 { font-size: 20px; margin-left: 10px; }
+
+.guess .container .cai { border: 1px solid #ccc; padding: 10px 0; }
+
+.guess .container .cai li { border: 1px solid #fff; margin: 0 20px; }
+
+.guess .container .cai li div { text-align: center; }
+
+.guess .container .cai li div img { width: 190px; }
+
+.guess .container .cai li .fl { color: #E21357; margin-left: 10px; }
+
+.guess .container .cai li .addche { display: block; height: 30px; background: #eee; line-height: 30px; width: 100px; text-align: center; margin: 10px auto; }
+
+.guess .container .cai li:hover { border-color: #ccc; }

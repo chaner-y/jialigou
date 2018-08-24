@@ -10,8 +10,100 @@
 <body>
     <div id="shoppingcar">
         <div class="top"></div>
-        <div class="header"></div>
-        <div class="nav"></div>
+        <div class="header">
+            <div class="container">
+                <div class="header_l">
+                    <h1>嘉丽购</h1>
+                    <a href="shoppingcar.html.html">购物车</a>
+                </div>
+                <ul class="header_r">
+                        <li>
+                            <span class="carlogo active"></span>
+                            <span class="caoc">我的购物车</span>
+                        </li>
+                        <li>
+                            <span class="carlogo"></span>
+                            <span class="caoc">提交订单</span>
+                        </li>
+                        <li>
+                            <span class="carlogo"></span>
+                            <span class="caoc">等待支付</span>
+                        </li>
+                        <li>
+                            <span class="carlogo"></span>
+                            <span class="caoc">支付成功</span>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <p class="main_t"><span>全部商品</span><a href="../index.html">返回主页</a></p>
+                <div class="main_c">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>全选</td>
+                                <td>商品名</td>
+                                <td>单价(元)</td>
+                                <td>数量</td>
+                                <td>嘉丽价</td>
+                                <td>操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="checkbox"><img src="../images/g1.jpg" alt="">
+                                </td>
+                                <td>
+                                    <h3>浪莎多彩立体高腰弹力裤</h3>
+                                    <p>货号：<span>20019378</span></p>
+                                    <p>颜色尺码：<span>37</span></p>
+                                    <p>浪莎多彩立体高腰弹力裤5+2劲爆组</p>
+                                </td>
+                                <td>
+                                    <p> ￥<span>199</span></p>
+                                </td>
+                                <td>
+                                    <span class="jian">-</span>
+                                    <input type="text" name="" value="1" class="num">
+                                    <span class="jia">+</span>
+                                </td>
+                                <td><p class="jiali">￥<span>199</span></td></p>
+                                <td>
+                                    <span class="adds">加入收藏夹</span>
+                                    <span class="del">删除</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="main_b">
+                    <div class="main_bl">
+                       <input type="checkbox"class="all" id="checkall"><label for="checkall">全选</label>
+                       <a href="#">删除选中的商品</a>
+                       <a href="#">清空购物车</a> 
+                    </div>
+                    <div class="main_bc">
+                        <p>商品金额：<span>598</span>元</p>
+                        <p>运费：<span>0</span>.00元</p>
+                        <p>可返回积分：<span class="jifen">402</span>*2=<span class="allfen">804</span></p>
+                        <h3>总计：<span class="total">598</span>元</h3>
+                    </div>
+                    <div class="main_br">
+                        <span>去结算</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guess">
+            <div class="container">
+                <h3>猜你喜欢</h3>
+                <ul class="cai"></ul>
+            </div>
+        </div>
         <div class="links"></div>
         <div class="footer"></div>
     </div>

@@ -33,6 +33,10 @@
 
 .tvhot .tvhot_b .tvhot_m .tvhot_g h6, .sellhot .tvhot_b .tvhot_m .tvhot_g h6 { height: 30px; line-height: 30px; padding-left: 10px; }
 
+.tvhot .tvhot_b .tvhot_m .tvhot_g h6 a, .sellhot .tvhot_b .tvhot_m .tvhot_g h6 a { color: #666; }
+
+.tvhot .tvhot_b .tvhot_m .tvhot_g h6 a:hover, .sellhot .tvhot_b .tvhot_m .tvhot_g h6 a:hover { color: #E21357; }
+
 .tvhot .tvhot_b .tvhot_m .tvhot_g p, .sellhot .tvhot_b .tvhot_m .tvhot_g p { height: 24px; line-height: 24px; padding-left: 10px; color: #E21357; }
 
 .tvhot .tvhot_b .tvhot_m .tvhot_g:hover, .sellhot .tvhot_b .tvhot_m .tvhot_g:hover { border: 1px solid #ccc; }
@@ -71,6 +75,10 @@
 .main .main0 .main_b .main_br li img { width: 175px; }
 
 .main .main0 .main_b .main_br li h6 { height: 30px; padding-left: 10px; }
+
+.main .main0 .main_b .main_br li h6 a { color: #666; }
+
+.main .main0 .main_b .main_br li h6 a:hover { color: #E21357; }
 
 .main .main0 .main_b .main_br li p { height: 20px; line-height: 20px; padding-left: 10px; color: #E21357; }
 

@@ -1,0 +1,215 @@
+@import 'var';
+.header{
+    .container{
+        @extend %flex;
+        margin:0 auto;
+        .header_l{
+            @extend %clearfix;
+                // @extend %fl;
+                h1{
+                     @extend %fl;
+                    height:130px;
+                    width:196px;
+                    margin:0;
+                    text-indent:-10000px;
+                    background:url(../images/base/ladygood.png)no-repeat left center;
+                }
+                a{
+                     @extend %fl;
+                     margin-left:nth($pd,1);
+                     padding-left:nth($pd,1);
+                     border-left:1px solid #ccc;
+                     display:block;
+                     font-size:14px;
+                     color:$aColor;
+                    margin-top:60px;
+                }
+        }
+        .header_r{
+            flex:1;
+            @extend %clearfix;
+            // @extend %fr;
+            margin:50px 0 0 330px;
+            li{
+                @extend %fl;
+                .carlogo{
+                    display:block;
+                    height:12px;
+                    width:135px;
+                    background:url(../images/goodslist/car2.png)no-repeat;
+                }
+                .caoc{
+                    display:block;
+                    height:24px;
+                    line-height:24px;
+                    text-align:center;
+                }
+                .active{
+                    background:url(../images/goodslist/car1.png)no-repeat;
+                }
+
+            }
+        }
+    }
+   
+}
+.main{
+    .main_t{
+        @extend %clearfix;
+        span{
+            @extend %fl;
+            height:24px;
+            line-height:24px;
+        }
+        a{
+            @extend %fr;
+            color:$mainColor;
+        }
+    }
+    .main_c{
+        table{
+            margin-top:nth($pd,1);
+            border:1px solid #ccc;
+            width:100%;
+            thead{
+                height:40px;
+                line-height:40px;
+                background:#EEEEEE;
+               border-bottom:1px solid #ccc;
+                td{
+                    padding-left:nth($pd,1);
+                }
+            }
+            tbody{
+                tr{
+                     border-bottom:1px solid #ccc;
+                     td{
+                        .checkbox{
+                            @extend %fl;
+                            margin:90px 10px;
+                        }
+                        img{
+                            @extend %fl;
+                            width:200px;
+                        }
+                        .num{
+                            width:40px;
+                            height:30px;
+                        }
+                        .jian,.jia{
+                            display:inline-block;
+                            width:20px;
+                            height:30px;
+                            text-align:center;
+                        }
+                       .jiali{
+                        font-weight:bold;
+                       }
+                       .adds,.del{
+                        display:block;
+                       }
+                    }
+                }
+               
+                
+            }
+        }
+        
+    }
+    .main_b{
+        height:130px;
+        @extend %flex;
+        background:#eeeeee;
+        border:1px solid #ccc;
+        .main_bl{
+            flex:1px;
+            padding:nth($pd,2);
+            a{
+                margin:0 nth($pd,1);
+                color:$aColor;
+                &:hover{
+                    color:$mainColor;
+                }
+            }
+        }
+        .main_bc{
+            width:215px;
+            border-right:1px solid #ccc;
+            p{
+                margin:0;
+                height:24px;
+                line-height:24px;
+            }
+            h3{
+                margin:nth($pd,1) 0;
+                height:30px;
+                line-height:30px;
+                font-size:20px;
+                font-weight:bold;
+                color:$mainColor;
+            }
+        }
+        .main_br{
+            width:330px;
+            span{
+                display:block;
+                width:150px;
+                height:30px;
+                line-height:30px;
+                text-align:center;
+                color:$ColorW;
+                background:$mainColor;
+                margin:90px 80px;
+            }
+        }
+    }
+}
+.guess{
+    .container{
+        margin:nth($pd,1) auto;
+        padding:0 nth($pd,1);
+    h3{
+        font-size:20px;
+        margin-left:nth($pd,1);
+
+    }
+    .cai{
+        border:1px solid #ccc;
+        padding:nth($pd,1) 0;
+
+        @extend %clearfix;
+        li{
+            @extend %fl;
+            border:1px solid $ColorW;
+            margin:0 nth($pd,2);
+            div{
+                text-align:center;
+                img{
+                 width:190px;
+                }
+            }
+             
+            @extend %title;
+            .fl{
+                color:$mainColor;
+                 margin-left:nth($pd,1) ;
+
+            }
+            .addche{
+                display:block;
+                height:30px;
+                background:#eee;
+                line-height:30px;
+                width:100px;
+                text-align:center;
+                margin:nth($pd,1) auto ;
+
+            }
+            &:hover{
+                border-color:#ccc;
+            }
+        }
+     }
+   }
+    
+}
