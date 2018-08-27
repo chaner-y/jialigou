@@ -127,7 +127,7 @@ jQuery(function($){
         Cookie.set('goodslist',JSON.stringify(guid),{path:'/'});
         location.href = "../html/goodsdetails.html";
       }
-    });
+    // });
 
         //传入cookie
         // var goodsl = Cookie.get('goodsl');
