@@ -90,14 +90,17 @@
         position:relative;
         .gengduo{
             position:absolute;
-            bottom:30px;
-            left:20px;
+            bottom:nth($pd,1);
+            left:nth($pd,2);
             a{
                 color:$aColor;
                 &:hover{
                     color:$mainColor;
                 }
             }
+        }
+        .information{
+            margin:nth($pd,1) nth($pd,2);
         }
     }
     .main_c2{
@@ -177,7 +180,8 @@
             }
         }
         tbody{
-            padding:nth($pd,1);
+            tr{
+              margin-bottom:nth($pd,1);
             .td_l{
                 @extend %fl;
                 img{
@@ -187,11 +191,14 @@
             .td_r{
                 @extend %fr;
                 text-align:left;
+                font-size:12px;
                 h6{
                     padding-left:nth($pd,1);
                     font-weight:bold;
                 }
+                }  
             }
+            
         }
         tfoot{
             height:40px;
@@ -209,6 +216,7 @@
         background:#eee;
         .jiesuan_l{
             @extend %fl;
+             margin:0 nth($pd,2);
             .wei{
                 height:50px;
                 line-height:50px;
@@ -218,9 +226,39 @@
                 height:30px;
                 width:60px;
             }
-            // .radio{
-            //     margin:0;
-            // }            
+            .radio{
+                display:inline;
+                
+            }    
+            a{
+                margin-left:nth($pd,1);
+                color:$aColor;
+                &:hover{
+                    color:$mainColor;
+                }
+            }      
+        }
+        .jiesuan_r{
+            margin:100px 50px 0;
+            @extend %fr;
+            text-align:right;
+            p{
+                .mj{
+                    color:$mainColor;
+                }
+            }
+            h4{
+                .total{
+                    color:$mainColor;
+                }
+            }
+            button{
+                border:none;
+                width:100px;
+                height:30px;
+                background:$mainColor;
+                color:$ColorW;
+            }
         }
     }
 }

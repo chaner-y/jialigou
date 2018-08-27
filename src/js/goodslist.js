@@ -64,7 +64,7 @@ jQuery(function($){
         goods.data.map(function(item){
             content += `<li data-guid="${item.id}">
                 <div>
-                    <img src="../${item.imgurl}" alt="" class="tupin">
+                    <img src="../${item.imgurl}" class="tupin">
                 </div>
                 <p><a class="title">${item.titile}</a></p>
                 <span class="fl">￥<span class="price">${item.price}</span></span><span class="fr" >已售：<span class="allsell">${item.sell}</span>件</span>
@@ -127,12 +127,51 @@ jQuery(function($){
         Cookie.set('goodslist',JSON.stringify(guid),{path:'/'});
         location.href = "../html/goodsdetails.html";
       }
+    });
+
+        //传入cookie
+        // var goodsl = Cookie.get('goodsl');
+        // if(goodsl === ''){
+        //     goodsl = []
+        // }else{
+        //     goodsl = JSON.parse(goodsl);
+        // }
+
       if(target.className="addcar"){
-          var qty =  $('.number').html();
-           $('.number').html(++qty);
+          var qty0 =  $('.number').html();
+           $('.number').html(++qty0);
             console.log($('.number').html());
-            Cookie.set('qty',JSON.stringify(qty),{path:'/'});
-      }
+            Cookie.set('qty0',JSON.stringify(qty0),{path:'/'});
+        //   var currDiv = target.closest('li');
+        //   var guid = $(currDiv).attr('data-guid');
+        //   var imgurl = $(currDiv).find('.tupin').attr("src");
+        //   // imgurl = imgurl.slice(3,17);
+        //   console.log(imgurl);
+        //   console.log(currDiv);
+        //   console.log(guid);
+        //   console.log(goodsl);
+        //   var currentGoods = $.grep(goodsl,function(g){
+        //             return g.id === guid;
+        //             console.log(g.guid);
+        //   });
+        //   console.log(currentGoods);
+        //   if(currentGoods.length>0){
+        //             // 存在，数量+1
+        //       currentGoods[0].qty++;
+        //   }else{
+        //     var goods = {
+        //       id:guid,
+        //       // imgurl:imgurl,
+        //       title:$(currDiv).find('.title').html(),
+        //       price:$(currDiv).find('.price').html(),
+        //       qty:1
+        //     }
+        //     console.log(goods);
+        //     goodsl.push(goods);
+        //   }
+        //   console.log(goodsl);
+        //   Cookie.set('goodsl',JSON.stringify(goodsl));
+        }
     });
 
    //排序

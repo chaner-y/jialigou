@@ -32,19 +32,13 @@
         }
     }
     .tvhot_b{
-        @extend %flex;
-        // .tvhot{
-        //     width:190px;
-        //     height:330px;
-        // }
-       
+        @extend %flex;       
         .tvhot_m{
             flex:1;
             @extend %flex;
             margin:0;
-            // position: relative;
-            overflow:hidden;
-            width:955px;
+            @extend %fl;
+            width:950px;
             justify-content: space-around;
             .tvhot_g{
                 flex:1;
@@ -86,9 +80,11 @@
                 
             }
         }
-        .pages{
+        .hot{
             position: relative;
-        //     @extend %clearfix;
+            @extend %clearfix;
+            width:959px;
+            overflow:hidden;
             .prev{
                 position:absolute;
                 top:50%;
@@ -119,6 +115,13 @@
                 .prev,.next{
                     display:block;
                 }
+             }
+             .pages{
+                @extend %clearfix;
+                // width:955px;
+                // height:327px;
+                position:absolute;
+                overflow:hidden;
              }
          }
         
@@ -216,4 +219,18 @@
             width:1190px;
         }
     }
+}
+.back{
+    position:fixed;
+    right:nth($pd,1);
+    bottom:nth($pd,2);
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    font-size:16px;
+    color:$mainColor;
+    border:1px solid #ccc;
+    background:#eee;
+    display:none;
 }

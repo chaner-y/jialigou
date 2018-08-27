@@ -1,11 +1,11 @@
 @charset "UTF-8";
 .tvhot .tvhot_b, .sellhot .tvhot_b, .tvhot .tvhot_b .tvhot_m, .sellhot .tvhot_b .tvhot_m, .main .main0 .main_b, .main .main0 .main_b .main_br { display: flex; }
 
-.main .main0 .main_b .main_bl ul li { float: left; }
+.tvhot .tvhot_b .tvhot_m, .sellhot .tvhot_b .tvhot_m, .main .main0 .main_b .main_bl ul li { float: left; }
 
 .sellhot .last { float: right; }
 
-.main .main0 .main_b .main_bl ul::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
+.tvhot .tvhot_b .hot::after, .sellhot .tvhot_b .hot::after, .tvhot .tvhot_b .hot .pages::after, .sellhot .tvhot_b .hot .pages::after, .main .main0 .main_b .main_bl ul::after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; zoom: 1; }
 
 /*轮播*/
 .banner .carousel-inner .item img { background-size: contain |cover; width: 100%; height: 480px; }
@@ -21,7 +21,7 @@
 
 .tvhot h3 a:hover, .sellhot h3 a:hover { text-decoration: none; }
 
-.tvhot .tvhot_b .tvhot_m, .sellhot .tvhot_b .tvhot_m { flex: 1; margin: 0; overflow: hidden; width: 955px; justify-content: space-around; }
+.tvhot .tvhot_b .tvhot_m, .sellhot .tvhot_b .tvhot_m { flex: 1; margin: 0; width: 950px; justify-content: space-around; }
 
 .tvhot .tvhot_b .tvhot_m .tvhot_g, .sellhot .tvhot_b .tvhot_m .tvhot_g { flex: 1; margin-left: 18px; border: 1px solid #eee; }
 
@@ -41,13 +41,15 @@
 
 .tvhot .tvhot_b .tvhot_m .tvhot_g:hover, .sellhot .tvhot_b .tvhot_m .tvhot_g:hover { border: 1px solid #ccc; }
 
-.tvhot .tvhot_b .pages, .sellhot .tvhot_b .pages { position: relative; }
+.tvhot .tvhot_b .hot, .sellhot .tvhot_b .hot { position: relative; width: 959px; overflow: hidden; }
 
-.tvhot .tvhot_b .pages .prev, .sellhot .tvhot_b .pages .prev { position: absolute; top: 50%; left: 22px; display: block; height: 50px; text-align: center; line-height: 50px; width: 30px; opacity: 0.8; background: #ccc; display: none; }
+.tvhot .tvhot_b .hot .prev, .sellhot .tvhot_b .hot .prev { position: absolute; top: 50%; left: 22px; display: block; height: 50px; text-align: center; line-height: 50px; width: 30px; opacity: 0.8; background: #ccc; display: none; }
 
-.tvhot .tvhot_b .pages .next, .sellhot .tvhot_b .pages .next { position: absolute; top: 50%; right: 5px; display: block; height: 50px; text-align: center; line-height: 50px; width: 30px; background: #ccc; display: none; }
+.tvhot .tvhot_b .hot .next, .sellhot .tvhot_b .hot .next { position: absolute; top: 50%; right: 5px; display: block; height: 50px; text-align: center; line-height: 50px; width: 30px; background: #ccc; display: none; }
 
-.tvhot .tvhot_b .pages:hover .prev, .sellhot .tvhot_b .pages:hover .prev, .tvhot .tvhot_b .pages:hover .next, .sellhot .tvhot_b .pages:hover .next { display: block; }
+.tvhot .tvhot_b .hot:hover .prev, .sellhot .tvhot_b .hot:hover .prev, .tvhot .tvhot_b .hot:hover .next, .sellhot .tvhot_b .hot:hover .next { display: block; }
+
+.tvhot .tvhot_b .hot .pages, .sellhot .tvhot_b .hot .pages { position: absolute; overflow: hidden; }
 
 /*热销*/
 .sellhot .last { margin-right: 10px; }
@@ -87,3 +89,5 @@
 .main .gg { margin-top: 20px; }
 
 .main .gg img { width: 1190px; }
+
+.back { position: fixed; right: 10px; bottom: 20px; width: 50px; height: 50px; line-height: 50px; text-align: center; font-size: 16px; color: #E21357; border: 1px solid #ccc; background: #eee; display: none; }

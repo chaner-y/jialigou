@@ -14,6 +14,8 @@ jQuery(function($){
     //失去焦点时
     $username.on('blur', function(){
         var _username = $username.val();
+        // var _password = $password.val();
+
         // console.log(_username);
         $.ajax({
             url: "../api/check.php",
@@ -36,45 +38,56 @@ jQuery(function($){
         var _username = $username.val();
         var _password = $password.val();
         var _rpassword = $rpassword.val();
-        var res = $checkbox.is(':checked');
-            console.log(res);
-       // if(!res){
-       //      alert('请阅读条款，并打钩');
-       //      // return false;
-       //  }
-        // if(_username=''|| _password=''|| _rpassword=''){
+        
+        // if(_username=== ""|| _password===""|| _rpassword===""){
         //     alert('用户名或密码不能为空');
         //     return false;
         // }
-        $.ajax({
-            url: "../api/register.php",
-            type: "POST",
-            data: {
-                "username":_username,
-                "password":_password,
-                "rpassword":_rpassword
-            },
-            success:function(data){
-                console.log(data);
-                if (data==='不一致'){
-                        alert('两次密码输入不一致，请重新输入');
-                    return false;
-                }
-                if(data==="success"){
-                    alert("注册成功！正在跳转。。。");
-                    setTimeout(function(){
-                        location.href= "../index.html";
-                }, 300);
-              }
-            }
-        });
+        //判断手机号码
 
-        //保存cookie
-        var date = new Date();
-        date.setDate(date.getDate()+1);
-        var arr = [_username];
-        // var username=+_username;
-        Cookie.set('obj',JSON.stringify(arr),{path:'/',expires:date});    
+        if(!/^1[3-9]\d{9}$/.test(_username)){
+            alert('手机号码不合法');
+            return false;
+        }
+        //判断密码
+        if(!/^\S{6,12}$/.test(_password)){
+            alert('密码不能有空格');
+            return false;
+         }
+        if($('.checkbox').is(':checked')){
+            $.ajax({
+                url: "../api/register.php",
+                type: "POST",
+                data: {
+                    "username":_username,
+                    "password":_password,
+                    "rpassword":_rpassword
+                },
+                success:function(data){
+                    console.log(data);
+                    if (data==='不一致'){
+                            alert('两次密码输入不一致，请重新输入');
+                        return false;
+                    }
+                    if(data==="success"){
+                        alert("注册成功！正在跳转。。。");
+                        setTimeout(function(){
+                            location.href= "../index.html";
+                    }, 300);
+                  }
+                }
+            });
+
+            //保存cookie
+            var date = new Date();
+            date.setDate(date.getDate()+1);
+            var arr = [_username];
+            // var username=+_username;
+            Cookie.set('obj',JSON.stringify(arr),{path:'/',expires:date});    
+         }else{
+            alert('请阅读条款，并打钩');
+         }
+       
     });
     
    

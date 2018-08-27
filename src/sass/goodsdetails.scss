@@ -149,7 +149,7 @@
                 padding:nth($pd,1) nth($pd,2);
                 background:#ccc;
             }
-            ul{
+            .goods0{
                 @extend %clearfix;
                 border:1px solid #ccc;
                 padding:nth($pd,3);

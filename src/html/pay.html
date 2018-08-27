@@ -12,11 +12,11 @@
     <div class="header">
         <div class="container">
             <div class="header_l">
-                <h1>嘉丽购</h1>
-                <a href="shoppingcar.html.html">提交订单</a>
+                <h1><a href="../index.html">嘉丽购</a></h1>
+                <a>提交订单</a>
             </div>
             <ul class="header_r">
-                    <li>
+                    <li class="gwc">
                         <span class="carlogo active"></span>
                         <span class="caoc">我的购物车</span>
                     </li>
@@ -43,7 +43,10 @@
                 <p class="fr"><a class="adddizhi">新增地址</a></p>
             </div>
             <div class="main_c1">
-                <p class="gengduo"><a >更多派送地址</a></p>
+                <div class="information">
+                    
+                </div>
+                <p class="gengduo"><a >更多派送地址》</a></p>
             </div>
             <div class="main_c2">
                 <div class="form">
@@ -72,7 +75,7 @@
                     </label>
                     <input type="text" name="" value="" id="telnum"placeholder="手机号码">
                 </div>  
-                <button type="button">保存</button>                  
+                <button type="button" class="save">保存</button>                  
                 </div>
             </div>
         </div>
@@ -108,11 +111,13 @@
                         <tr>
                             <td class="gl">商品名称</td>
                             <td>商品价格</td>    
-                            <td>数量</td>    
+                            <td>数量</td>   
+                            <td>总价</td>     
                             <td>运费</td>    
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
                         <td>
                             <div class="td_l">
                                 <img src="../images/g12.jpg">
@@ -126,6 +131,7 @@
                         <td><span>￥<span>399</span></span></td>
                         <td><span>1</span></td>
                         <td>免费</td>
+                        </tr>
                     </tbody>
                     <tfoot>
                         <tr><td colspan="4">添加订单备注信息：<input type="text" name="" class="txt">请勿填写与支付、收货、发票相关内容</td></tr>
@@ -135,12 +141,16 @@
                     <div class="jiesuan_l">
                         <label for="code" class="wei">微信客服推荐码：</label><input type="text" id="code"><br/>
                         <input type="radio" name="radio" id="ck" class="radio">
-                        <label for="ck">使用礼品卡劵<span>礼品卡劵总价值<i></i> 元</span><a>礼品卡充值</a></label><br/>
+                        <label for="ck">使用礼品卡劵<strong>礼品卡劵总价值<i></i> 元</strong><a>礼品卡充值</a></label><br/>
                         <input type="radio" name="radio" id="juan" class="radio">
                         <label for="juan">我的折价券(特惠商品海量商品不能使用)</label><br/>
                     </div>
                     <div class="jiesuan_r">
-                        
+                        <p>商品总计：<span class="aprice">0.00</span>元+运费：<span class="yunfei">0.00</span>-优惠：<span>10.00</span>元<span class="mj">（满1000减20）<span class="manjian">20</span>元</span></p>
+                        <h4>应付总额：<span class="total">0.00</span></h4>
+                        <p>收货地址：<span class="dz"></span></p>
+                        <p>收件人：<span class="xm"></span></p>
+                        <button type="button">提交订单</button>
                     </div>
                 </div>
             </div>
@@ -148,6 +158,7 @@
     </div>
     <div class="links"></div>
     <div class="footer"></div>
+    <div class="back"><i class="glyphicon glyphicon-upload"></i></div>
 </body>
 <script src="../js/jquery-3.2.1.js"></script>
 <script src="../js/common.js"></script>

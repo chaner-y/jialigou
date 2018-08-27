@@ -131,6 +131,9 @@ a:hover{
                 border:1px solid #eee;
                 font-size:$mainFontSize;
                 @extend %fr;
+                a{
+                    color:$aColor;
+                }
                 span{
                     display:inline-block;
                     height:13px;
@@ -154,6 +157,14 @@ a:hover{
             
         }
     }
+}
+.actfixed{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:100;
+    background:$ColorW;
 }
 /*导航栏*/
 .nav{
