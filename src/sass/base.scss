@@ -1,0 +1,413 @@
+@import 'var';
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0;
+    font-size:$mainFontSize;
+}
+ul{
+    list-style:none;
+    // margin:0;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color:$mainColor;
+    text-decoration:underline;
+}
+.container{
+    width:1190px;
+    margin:0 auto;
+}
+
+/*顶部*/
+.top{
+    // height:35px;
+    @extend %clearfix;
+    background-color:#F7F7F7;
+    .container{
+        // height:35px;
+         @extend %clearfix;
+        border-bottom:1px solid #E8E8E7;
+        
+        .top_l{
+            @extend %fl;
+            height:35px;
+            line-height:35px;
+            padding-left:22px;
+            // font-size:12px;
+            color:$aColor;
+            margin:0;
+            background:url('../images/base/cell.png')no-repeat left center;
+            span{
+                font-weight:bold;
+                color:$mainColor;
+                margin:5px;
+            }
+        }
+        .top_c{
+            @extend %fl;
+            margin:0 50px;
+            a{
+                display:inline-block;
+                height:35px;
+                line-height:35px;
+                 color:$aColor;
+                margin-left:10px;
+
+            }
+            a:hover{
+                color:$mainColor;
+                text-decoration:underline;
+            }
+        }
+        .top_r{
+            @extend %fr;
+            ul{
+                margin:0;
+                @extend %clearfix;
+                li{
+                    @extend %fl;
+                    a{
+                        display:block;
+                        height:35px;
+                        line-height:35px;
+                        margin: 0 10px;
+                        color:$aColor;
+                    }
+                    a.last{
+                        padding-left:22px;
+                        background:url(../images/base/phome.png)no-repeat left center;
+                    }
+                    a:hover{
+                        color:$mainColor;
+                        text-decoration:underline;
+                    }
+                }
+            }
+
+        }
+    }
+}
+/*头部*/
+.header{
+    // height:74px;
+    .container{
+        // height:74px;
+        display:flex;
+        margin-top:10px;
+        padding-bottom:nth($pd,1);
+        .h_l{
+            margin:0;
+            text-indent:-100000px;
+            height:74px;
+            background:url(../images/base/ladygood.png)no-repeat;
+            flex:1;
+        }
+        .h_c{
+            padding-top:20px;
+            flex:1;
+            input{
+                border-color:$mainColor;
+            }
+            button{
+                background-color:$mainColor;
+                color:#fff;
+            }
+            
+        }
+        .h_r{
+            flex:1;
+            height:74px;
+            .car{
+                width:155px;
+                margin-top:20px;
+                height:30px;
+                background:#fff;
+                border:1px solid #eee;
+                font-size:$mainFontSize;
+                @extend %fr;
+                a{
+                    color:$aColor;
+                }
+                span{
+                    display:inline-block;
+                    height:13px;
+                    width:20px;
+                    margin-left:-20px;
+                    position:relative;
+                    background:url('../images/base/cart.png')no-repeat left center;
+                    i{
+                        position:absolute;
+                        top:-7px;
+                        right:-7px;
+                        height:15px;
+                        width:15px;
+                        border-radius:40%;
+                        background:$mainColor;
+                        color:$ColorW;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+.actfixed{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index:100;
+    background:$ColorW;
+}
+/*导航栏*/
+.nav{
+    // height:36px;
+    border-bottom:2px solid $mainColor;
+    .container{
+         @extend %flex;
+        // @extend %clearfix;
+        .n_l{
+            @extend %fl;
+            height:34px;
+            background:$mainColor;
+            width:190px;
+            position:relative;
+            h3{
+                margin:0;
+                height:34px;
+                font-size:20px;
+                line-height:34px;
+                padding-left:nth($pd,1);
+                color:$ColorW;
+                font-weight:bold;  
+                position:relative;
+            }
+            .nav2{
+                width:190px;
+                position:absolute;
+                background:#3B2C33;
+                z-index:1;
+                padding-bottom:nth($pd,1);
+                display:none;
+                .nav2_m{
+                     padding-left:nth($pd,1);
+                     padding-top:nth($pd,3);
+                     padding-bottom:nth($pd,3);
+                     
+                    h5{
+                        margin:0;
+                        a{
+                            height:24px;
+                            line-height:24px;
+                            font-size:14px;
+                            color:$ColorW;
+                            margin-right:5px;
+                            font-weight:bold;
+                        }
+                        
+                    }
+                    ul{
+                        @extend %clearfix;
+                        margin:0;
+                        li{
+                            @extend %fl;
+                            a{
+                                display:block;
+                                height:18px;
+                                line-height:18px;
+                                color:$ColorW;
+                                font-size:10px;
+                                margin-right:10px;
+                            }
+                        }
+                        
+                    }
+                    .nav_3{
+                        display:none;
+                        width:570px;
+                        height:480px;
+                        position:absolute;
+                        top:0;
+                        left:190px;
+                        background-color:$ColorW;
+                        opacity: 0.8;
+                        padding:30px;
+                        a{
+                            display:block;
+                            height:24px;
+                            line-height:24px;
+                        }
+                    }
+                }
+                .nav2_m:hover{
+                    background:$ColorW;
+                   
+                    a{ 
+                         color:$aColor;
+                        
+                         a:hover{
+                             text-decoration:underline;
+                         }
+                    }
+                    .nav_3{
+                        display:block;
+                    }
+                }
+            }
+        }
+        .n_l:hover .nav2{
+                display:block;
+            }
+        .n_c{
+             // @extend %fl;
+             flex:1;
+             margin:0;
+             li{
+                 @extend %fl;
+             }
+             a{
+                display:block;
+                height:34px;
+                line-height:34px;
+                font-size:20px;
+                font-weight:bold;
+                margin-left:nth($pd,4);
+                color:$aColor;
+                span{
+                    padding:0 10px;
+                    border-right:1px solid #ccc;
+                    font-size:12px;
+                    height:34px;
+                    line-height:34px;
+                }
+             }
+             a:hover{
+                color:$mainColor;
+                text-decoration:none;
+            }
+        }
+        .n_r{
+            width:325px;
+            margin:0;
+            height:34px;
+            line-height:34px;
+            font-weight:bold;
+            span{
+                color:$mainColor;
+            }
+        }
+
+    }
+   
+}
+/*links*/
+.links{
+    margin:nth($pd,5) 0;
+    border-top:2px solid $mainColor;
+    .links_t{
+        @extend %flex;
+         // justify-content: space-around;
+         margin:16px 20px;
+         text-align:center;
+         li{
+            flex:1;
+            width:280px;
+            height:48px;
+           
+         }
+    }
+    .links_b{
+         @extend %flex;
+         .links_bl{
+            width:170px;
+            padding:16px 0 18px;
+         }
+         .links_bc{
+            flex:1;
+            @extend %flex;
+            text-align:center;
+            border-left:1px solid #ccc;
+            border-right:1px solid #ccc;
+
+            // justify-items: space-around;
+            // padding-top:nth($pd,1);
+            dl{
+                flex:1;
+                height:150px;
+                dd,dt{
+                    height:30px;
+                    line-height:30px;
+                    a{
+                        color:$aColor;
+                    }
+                    a:hover{
+                        color:$mainColor;
+                    }
+                }
+            }
+         }
+         .links_br{
+            @extend %clearfix;
+            width:300px;
+            padding:38px 0 0 50px;
+            img{
+                @extend %fl;
+                }
+            div{
+                @extend %fl;
+                margin-left:12px;
+                text-align:center;
+                h3{
+                    font-size:18px;
+                    font-weight:bold;
+                    margin-top:10px;
+                }
+            }
+         }
+    }
+}
+/*footer*/
+.footer{
+    background:#F8F8F8;
+    text-align:center;
+    ul{
+        @extend %clearfix;
+        padding:10px 0;
+        margin:0 175px;
+        li{
+            @extend %fl;
+            a{
+                color:$aColor;
+                span{
+                    display:inline-block;
+                    height:10px;
+                    border-right:1px solid #ddd;
+                    margin:0 10px; 
+                }
+               
+            }
+            a:hover{
+                color:$mainColor;
+            }
+        }
+    }
+    p{
+        color:#999999;
+        margin:0;
+    }
+    .last{
+        @extend %clearfix;
+        margin:0 270px;
+        li{
+            @extend %fl;
+            margin:0 10px;
+        }
+    }
+}

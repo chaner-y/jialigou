@@ -1,0 +1,264 @@
+@import 'var';
+.header{
+    .container{
+        @extend %flex;
+        margin:0 auto;
+        .header_l{
+            @extend %clearfix;
+                // @extend %fl;
+                h1{
+                     @extend %fl;
+                    height:130px;
+                    width:196px;
+                    margin:0;
+                    text-indent:-10000px;
+                    background:url(../images/base/ladygood.png)no-repeat left center;
+                }
+                a{
+                     @extend %fl;
+                     margin-left:nth($pd,1);
+                     padding-left:nth($pd,1);
+                     border-left:1px solid #ccc;
+                     display:block;
+                     font-size:14px;
+                     color:$aColor;
+                    margin-top:60px;
+                }
+        }
+        .header_r{
+            flex:1;
+            @extend %clearfix;
+            // @extend %fr;
+            margin:50px 0 0 315px;
+            li{
+                @extend %fl;
+                .carlogo{
+                    display:block;
+                    height:12px;
+                    width:135px;
+                    background:url(../images/goodslist/car2.png)no-repeat;
+                }
+                .caoc{
+                    display:block;
+                    height:24px;
+                    line-height:24px;
+                    text-align:center;
+                }
+                .active{
+                    background:url(../images/goodslist/car1.png)no-repeat;
+                }
+
+            }
+        }
+    }
+   
+}
+.main{
+    margin-bottom:nth($pd,1);
+    .queren{
+        padding-left:nth($pd,1);
+    }
+    .main_t{
+        @extend %clearfix;
+        background:#eee;
+        border:1px solid #ccc;
+        .fl{
+            margin:0;
+            @extend %fl;
+            height:40px;
+            line-height:40px;
+            padding-left:nth($pd,1);
+        }
+        .fr{
+            margin:0;
+            @extend %fr;
+            a{
+                display:block;
+                height:40px;
+                line-height:40px;
+                padding-right:nth($pd,1);
+                color:$aColor;
+                &:hover{
+                    color:$mainColor;
+                }
+            }
+        }
+    }
+    .main_c1{
+        height:150px;
+        border:1px solid #ccc;
+        position:relative;
+        .gengduo{
+            position:absolute;
+            bottom:nth($pd,1);
+            left:nth($pd,2);
+            a{
+                color:$aColor;
+                &:hover{
+                    color:$mainColor;
+                }
+            }
+        }
+        .information{
+            margin:nth($pd,1) nth($pd,2);
+        }
+    }
+    .main_c2{
+        display:none;
+        height:325px;
+        border:1px solid #ccc;
+        .form{
+            width:680px;
+            margin:18px auto;
+            border:1px solid #ccc;
+            background:#eee;
+            height:285px;
+            padding:23px 90px;
+            div{
+                input{
+                    width:200px;
+                    height:30px;
+                    padding-left:nth($pd,1);
+                }
+                margin:nth($pd,1);
+                .select{
+                width:80px;
+                height:25px;
+                text-align:center;
+                }
+            }
+            button{
+                width:200px;
+                height:30px;
+                background:$mainColor;
+                color:$ColorW;
+                border:none;
+                margin:nth($pd,1);
+            }
+        }
+    }
+}
+.paystyle{
+    margin:nth($pd,1) 0;
+    .paies{
+        padding-left:nth($pd,2);
+        background:#eee;
+        border:1px solid #ccc;
+        height:155px;
+        @extend %flex;
+        flex-direction: column;
+        padding-top:nth($pd,1);
+        div{
+            flex:1;
+        }
+    }
+}
+.goods{
+    p{
+       padding-left:nth($pd,1);
+       a{
+        color:$aColor;
+        font-size:10px;
+        margin-left:nth($pd,2);
+        &:hover{
+            color:$mainColor;
+        }
+       }
+    }
+    table{
+        width:100%;
+        border:1px solid #ccc;
+        text-align:center;
+        margin-bottom:nth($pd,2);
+        thead{
+            background:#eee;
+            tr{
+                height:40px;
+                .gl{
+                    width:370px;
+                }
+            }
+        }
+        tbody{
+            tr{
+              margin-bottom:nth($pd,1);
+            .td_l{
+                @extend %fl;
+                img{
+                    width:100px;
+                }
+            }
+            .td_r{
+                @extend %fr;
+                text-align:left;
+                font-size:12px;
+                h6{
+                    padding-left:nth($pd,1);
+                    font-weight:bold;
+                }
+                }  
+            }
+            
+        }
+        tfoot{
+            height:40px;
+            line-height:40px;
+            .txt{
+                height:30px;
+                width:500px;
+                margin:nth($pd,1);
+            }
+        }
+    }
+    .jiesuan{
+        @extend %clearfix;
+        height:300px;
+        background:#eee;
+        .jiesuan_l{
+            @extend %fl;
+             margin:0 nth($pd,2);
+            .wei{
+                height:50px;
+                line-height:50px;
+                margin-left:nth($pd,2);
+            }
+            #code{
+                height:30px;
+                width:60px;
+            }
+            .radio{
+                display:inline;
+                
+            }    
+            a{
+                margin-left:nth($pd,1);
+                color:$aColor;
+                &:hover{
+                    color:$mainColor;
+                }
+            }      
+        }
+        .jiesuan_r{
+            margin:100px 50px 0;
+            @extend %fr;
+            text-align:right;
+            p{
+                .mj{
+                    color:$mainColor;
+                }
+            }
+            h4{
+                .total{
+                    color:$mainColor;
+                }
+            }
+            button{
+                border:none;
+                width:100px;
+                height:30px;
+                background:$mainColor;
+                color:$ColorW;
+            }
+        }
+    }
+}
